@@ -4,6 +4,7 @@ using ConsoleApp29.data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleApp29.Migrations
 {
     [DbContext(typeof(coursedbcontext))]
-    partial class coursedbcontextModelSnapshot : ModelSnapshot
+    [Migration("20250307023635_dataannotation")]
+    partial class dataannotation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -80,7 +83,7 @@ namespace ConsoleApp29.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("department", "dbo");
+                    b.ToTable("Department");
                 });
 
             modelBuilder.Entity("ConsoleApp29.entities.instructor", b =>
@@ -121,12 +124,14 @@ namespace ConsoleApp29.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<string>("address")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("age")
+                    b.Property<int>("age")
                         .HasColumnType("int");
 
                     b.Property<string>("email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("fname")
@@ -135,9 +140,11 @@ namespace ConsoleApp29.Migrations
                         .HasColumnType("varchar");
 
                     b.Property<string>("lname")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("phonenumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

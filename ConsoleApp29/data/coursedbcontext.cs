@@ -1,4 +1,5 @@
-﻿using ConsoleApp29.entities;
+﻿using ConsoleApp29.configuration;
+using ConsoleApp29.entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,5 +20,14 @@ namespace ConsoleApp29.data
         public DbSet<course> Course { get; set; }
         public DbSet<instructor> Instructor { get; set; }
         public DbSet<Topic> Topic { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //fluent API
+            //student has property (fname)is required
+            //modelBuilder.Entity<student>().Property(nameof(student.address)).HasDefaultValue("cairo");
+            //base.OnModelCreating(modelBuilder);
+            //modelBuilder.ApplyConfiguration<student>(new studentconf());
+           // modelBuilder.ApplyConfigurationsFromAssembly(Assembly.Getexecutingassembly());
+        }
     }
 }

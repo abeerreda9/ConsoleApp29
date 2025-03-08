@@ -14,5 +14,7 @@ namespace ConsoleApp29.entities
         public decimal bouns { get; set; }
         public string? address { get; set; }
         public decimal HourRate { get; set; }
+        //kkk
+        //hggbc
     }
 }
