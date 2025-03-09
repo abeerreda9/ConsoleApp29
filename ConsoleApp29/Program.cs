@@ -6,7 +6,7 @@ namespace ConsoleApp29
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)//
         {
             using (coursedbcontext coursedbcontext = new coursedbcontext())
             {
