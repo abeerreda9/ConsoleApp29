@@ -10,6 +10,6 @@ namespace ConsoleApp29.entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
+//
     }
 }

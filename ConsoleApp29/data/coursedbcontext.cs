@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp29.data
 {
-    internal class coursedbcontext:DbContext
+    internal class coursedbcontext:DbContext//
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

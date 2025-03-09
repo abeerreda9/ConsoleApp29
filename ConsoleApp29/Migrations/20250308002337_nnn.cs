@@ -3,7 +3,7 @@
 #nullable disable
 
 namespace ConsoleApp29.Migrations
-{
+{//
     /// <inheritdoc />
     public partial class nnn : Migration
     {
