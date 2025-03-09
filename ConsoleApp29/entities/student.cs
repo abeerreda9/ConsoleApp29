@@ -11,7 +11,7 @@ namespace ConsoleApp29.entities
 {
     [Table("student",Schema ="dbo")]
     internal class student
-    {
+    {//
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
