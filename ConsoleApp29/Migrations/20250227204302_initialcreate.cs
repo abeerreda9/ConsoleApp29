@@ -69,6 +69,7 @@ namespace ConsoleApp29.Migrations
                 },
                 constraints: table =>
                 {
+                    //
                     table.PrimaryKey("PK_Students", x => x.id);
                 });
 
